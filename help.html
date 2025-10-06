@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build Your Catapult</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #d4773d 0%, #8b4513 100%);
+            padding: 40px 20px;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #d4773d 0%, #8b4513 100%);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '🔧';
+            font-size: 60px;
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .header::after {
+            content: '🔨';
+            font-size: 60px;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        h1 {
+            font-family: 'Creepster', cursive;
+            color: white;
+            margin: 0;
+            font-size: 42px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            padding: 0 80px;
+        }
+        
+        .subtitle {
+            color: white;
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-link a {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4773d 0%, #8b4513 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            color: #8b4513;
+            font-size: 28px;
+            margin: 35px 0 20px 0;
+            border-bottom: 3px solid #d4773d;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        h3 {
+            color: #8b4513;
+            font-size: 22px;
+            margin-top: 30px;
+            font-weight: 700;
+        }
+        
+        .design-option {
+            background: linear-gradient(135deg, #fff8dc 0%, #ffefd5 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #d4773d;
+        }
+        
+        .design-option h4 {
+            color: #d4773d;
+            margin-top: 0;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .design-option p {
+            margin: 12px 0;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        .tips-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border: 2px solid #d4773d;
+        }
+        
+        .tips-box p {
+            margin: 12px 0;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        .safety-box {
+            background: #fff3cd;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 3px solid #ffc107;
+        }
+        
+        .safety-box h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        
+        .safety-box p {
+            margin: 10px 0;
+            color: #856404;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+        
+        .fun-box {
+            text-align: center;
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #fff8dc 0%, #ffefd5 100%);
+            border-radius: 12px;
+            border: 3px solid #d4773d;
+        }
+        
+        .fun-box p:first-child {
+            font-size: 20px;
+            color: #8b4513;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+        
+        .fun-box p:last-child {
+            color: #666;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header::before,
+            .header::after {
+                font-size: 40px;
+            }
+            
+            h1 {
+                font-size: 30px;
+                padding: 0 60px;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            h3 {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .header::before {
+                left: 10px;
+            }
+            
+            .header::after {
+                right: 10px;
+            }
+            
+            h1 {
+                font-size: 26px;
+                padding: 0 50px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HOW TO BUILD YOUR CATAPULT</h1>
+            <div class="subtitle">Stuart Pumpkin Chunkin 2025</div>
+        </div>
+        
+        <div class="content">
+            <div class="back-link">
+                <a href="index.html">← Back to Contest Rules</a>
+            </div>
+            
+            <h2>🎯 Basic Design Options</h2>
+            
+            <div class="design-option">
+                <h4>Option 1: Simple Catapult (Easiest)</h4>
+                <p><strong>How it works:</strong> Uses a lever arm that rotates around a pivot point. Pull down the arm, release, and it flings the projectile.</p>
+                <p><strong>Materials needed:</strong> Wood boards (2x4s work great), screws, a strong pivot bolt, bungee cords or springs, and something for the counterweight (bucket filled with rocks, sand, or weights).</p>
+                <p><strong>Tip:</strong> The longer the throwing arm compared to the counterweight arm, the farther it will throw.</p>
+                <p><strong>Example:</strong> <a href="https://www.instructables.com/How-To-Build-A-Catapult/" target="_blank" style="color: #d4773d;">Simple Catapult Tutorial</a></p>
+            </div>
+            
+            <div class="design-option">
+                <h4>Option 2: Trebuchet (More Distance)</h4>
+                <p><strong>How it works:</strong> A swinging arm with a sling that releases the projectile. Gravity pulls the counterweight down, which swings the arm up.</p>
+                <p><strong>Materials needed:</strong> Stronger wood frame (needs to support 25 lbs dropping), long arm (4-6 feet), rope or chain for sling, pivot axle, counterweight.</p>
+                <p><strong>Tip:</strong> The release angle is critical. Aim for the sling to release around 45 degrees for maximum distance.</p>
+                <p><strong>Example:</strong> <a href="https://www.instructables.com/Floating-Arm-Trebuchet/" target="_blank" style="color: #d4773d;">Trebuchet Tutorial</a></p>
+            </div>
+            
+            <h2>💡 Key Design Tips</h2>
+            
+            <div class="tips-box">
+                <p><strong>✓ Arm Length Ratio:</strong> For best distance, make your throwing arm 3-4 times longer than the counterweight side.</p>
+                <p><strong>✓ Sturdy Base:</strong> Build a wide, heavy base so your catapult does not tip over when firing.</p>
+                <p><strong>✓ Strong Pivot:</strong> Use a metal bolt or rod for the pivot. It needs to handle significant force.</p>
+                <p><strong>✓ Smooth Release:</strong> Test your release mechanism many times. Consistency leads to better scores.</p>
+                <p><strong>✓ Adjustability:</strong> Add ways to adjust the counterweight position or release point for tuning.</p>
+            </div>
+            
+            <h2>🛠️ Material Suggestions</h2>
+            
+            <div class="tips-box">
+                <p><strong>Frame:</strong> 2x4 lumber, PVC pipe, or even sturdy cardboard for lighter designs</p>
+                <p><strong>Counterweight (Recommended):</strong> 25 lbs of plate weights with a cable run through the center holes and secured with a carabiner. This setup allows for easy attachment and adjustment.</p>
+                <p><strong>Fasteners:</strong> Wood screws, bolts with nuts, zip ties, duct tape</p>
+                <p><strong>Throwing Arm:</strong> Long wooden dowel, 2x2 board, PVC pipe, or bamboo pole</p>
+                <p><strong>Projectile Holder:</strong> Cup, basket, spoon shape, or sling made from cloth/rope</p>
+            </div>
+            
+            <h2>📚 Additional Resources</h2>
+            
+            <div class="tips-box">
+                <p><a href="https://www.real-world-physics-problems.com/catapult-physics.html" target="_blank" style="color: #d4773d; font-weight: 600;">Physics of Catapults</a> - Understanding the mechanics</p>
+                <p><a href="https://www.pbs.org/wgbh/nova/lostempires/trebuchet/" target="_blank" style="color: #d4773d; font-weight: 600;">NOVA: Trebuchet</a> - Educational background on trebuchets</p>
+                <p><a href="https://www.wikihow.com/Build-a-Trebuchet" target="_blank" style="color: #d4773d; font-weight: 600;">WikiHow: Build a Trebuchet</a> - Step-by-step guide</p>
+            </div>
+            
+            <div class="fun-box">
+                <p>Have fun and be creative</p>
+                <p>Grandma Cheri and Aunt Linda love seeing unique designs</p>
+            </div>
+            
+            <div class="back-link" style="margin-top: 40px;">
+                <a href="index.html">← Back to Contest Rules</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
