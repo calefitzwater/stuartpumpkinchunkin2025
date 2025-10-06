@@ -193,9 +193,62 @@
             }
         }
         
+        @media (max-width: 768px) {
+            .header::before,
+            .header::after {
+                font-size: 40px;
+            }
+            
+            h1 {
+                font-size: 32px;
+                padding: 0 60px;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+        
         @media (max-width: 600px) {
             .awards-section {
                 grid-template-columns: 1fr;
+            }
+            
+            .header::before {
+                left: 10px;
+            }
+            
+            .header::after {
+                right: 10px;
+            }
+            
+            h1 {
+                font-size: 28px;
+                padding: 0 50px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .award-icon {
+                font-size: 36px;
             }
         }
     </style>
@@ -272,6 +325,12 @@
                         <tr><td></td><td></td><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="help.html" style="display: inline-block; background: linear-gradient(135deg, #d4773d 0%, #8b4513 100%); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    🔧 Building Guide
+                </a>
             </div>
         </div>
     </div>
